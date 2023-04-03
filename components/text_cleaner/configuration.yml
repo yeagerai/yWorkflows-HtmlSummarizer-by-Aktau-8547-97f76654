@@ -1,7 +1,9 @@
 description: Processes the extracted text from an HtmlParser component to remove extra
   whitespace, line breaks, special characters, and HTML entities. Outputs the cleaned
   text as a single string.
+input-class: TextCleanerInputDict
 name: TextCleaner
+output-class: TextCleanerOutputDict
 parameters:
   remove_html_entities: 'True'
   remove_special_characters: 'True'
