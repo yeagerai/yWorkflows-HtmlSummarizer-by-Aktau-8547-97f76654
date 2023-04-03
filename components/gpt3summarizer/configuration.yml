@@ -1,7 +1,9 @@
 description: Uses OpenAI's GPT-3 API to generate summaries for each text chunk. Each
   chunk is processed with the appropriate GPT-3 API call (davinci, curie, babbage,
   or ada) and a summary is returned.
+input-class: Gpt3SummarizerInputDict
 name: Gpt3Summarizer
+output-class: Gpt3SummarizerOutputDict
 parameters:
   api_key: null
   engine: curie
