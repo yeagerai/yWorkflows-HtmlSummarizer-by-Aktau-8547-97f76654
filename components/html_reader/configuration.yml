@@ -1,0 +1,7 @@
+description: Reads the HTML content from the provided URL using requests.get() method,
+  and stores the content in a variable for further processing in the workflow.
+name: HtmlReader
+parameters:
+  timeout: 30
+  user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
+    like Gecko) Chrome/58.0.3029.110 Safari/537.3
