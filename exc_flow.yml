@@ -1,0 +1,43 @@
+yaml
+components:
+  node-0:
+    class: HtmlReader
+    module-path: components/html_reader/html_reader.py
+    configuration: !include components/html_reader/configuration.yml
+  node-1:
+    class: HtmlParser
+    module-path: components/html_parser/html_parser.py
+    configuration: !include components/html_parser/configuration.yml
+  node-2:
+    class: TextCleaner
+    module-path: components/text_cleaner/text_cleaner.py
+    configuration: !include components/text_cleaner/configuration.yml
+  node-3:
+    class: TextChunker
+    module-path: components/text_chunker/text_chunker.py
+    configuration: !include components/text_chunker/configuration.yml
+  node-4:
+    class: Gpt3Summarizer
+    module-path: components/gpt3_summarizer/gpt3_summarizer.py
+    configuration: !include components/gpt3_summarizer/configuration.yml
+  node-5:
+    class: SummaryConcatenator
+    module-path: components/summary_concatenator/summary_concatenator.py
+    configuration: !include components/summary_concatenator/configuration.yml
+
+flow-matrix:
+  [
+    [0, 1, 0, 0, 0, 0],
+    [0, 0, 1, 0, 0, 0],
+    [0, 0, 0, 1, 0, 0],
+    [0, 0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 0, 1],
+    [0, 0, 0, 0, 0, 0],
+  ]
+
+mapper:
+  node-1.HtmlParser.html_content_input: node-0.HtmlReader.html_content_output
+  node-2.TextCleaner.raw_text_input: node-1.HtmlParser.parsed_text_output
+  node-3.TextChunker.cleaned_text_input: node-2.TextCleaner.cleaned_text_output
+  node-4.Gpt3Summarizer.text_chunks_input: node-3.TextChunker.text_chunks_output
+  node-5.SummaryConcatenator.summaries_input: node-4.Gpt3Summarizer.summaries_output
