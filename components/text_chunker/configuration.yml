@@ -1,0 +1,9 @@
+description: The TextChunker component splits the cleaned text into smaller chunks
+  using sentence tokenization with NLTK or spaCy, ensuring that the chunks are compatible
+  with GPT-3's maximum token limit. This allows for efficient processing of large
+  input texts by conforming to the constraints of the GPT-3 API while preserving sentence
+  structure and meaning.
+name: TextChunker
+parameters:
+  max_token_limit: 2048
+  tokenization_library: nltk
