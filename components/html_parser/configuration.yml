@@ -1,0 +1,14 @@
+description: Uses Beautiful Soup library to parse the HTML content obtained from HtmlReader,
+  extracting the relevant text within HTML tags and storing the text data. This component
+  processes the raw HTML content and simplifies it by removing unnecessary tags and
+  elements, resulting in a more structured and readable format.
+name: HtmlParser
+parameters:
+  tags_to_extract:
+  - p
+  - h1
+  - h2
+  - h3
+  - h4
+  - h5
+  - h6
