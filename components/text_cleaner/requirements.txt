@@ -1,0 +1,10 @@
+
+os
+re
+html
+typing
+yaml>=5.4.1
+dotenv>=0.15.0
+fastapi>=0.67.0
+pydantic>=1.8.2
+core-abstract-component>=1.0.0
