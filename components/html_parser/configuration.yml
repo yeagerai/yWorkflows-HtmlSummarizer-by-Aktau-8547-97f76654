@@ -2,7 +2,9 @@ description: Uses Beautiful Soup library to parse the HTML content obtained from
   extracting the relevant text within HTML tags and storing the text data. This component
   processes the raw HTML content and simplifies it by removing unnecessary tags and
   elements, resulting in a more structured and readable format.
+input-class: HtmlParserInputDict
 name: HtmlParser
+output-class: HtmlParserOutputDict
 parameters:
   tags_to_extract:
   - p
