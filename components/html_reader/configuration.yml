@@ -1,6 +1,8 @@
 description: Reads the HTML content from the provided URL using requests.get() method,
   and stores the content in a variable for further processing in the workflow.
+input-class: HtmlReaderInputDict
 name: HtmlReader
+output-class: HtmlReaderOutputDict
 parameters:
   timeout: 30
   user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,
