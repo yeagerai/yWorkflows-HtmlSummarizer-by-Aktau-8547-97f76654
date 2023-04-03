@@ -1,0 +1,6 @@
+description: A component that takes a URL as input and outputs a summary of the retrieved
+  HTML content. The component fetches the HTML content from the provided URL, parses
+  and extracts the significant text, and generates a concise summary that represents
+  the main information contained in the original HTML.
+name: HtmlSummarizer
+parameters: {}
