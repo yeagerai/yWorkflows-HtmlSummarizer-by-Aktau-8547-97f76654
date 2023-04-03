@@ -3,7 +3,9 @@ description: The TextChunker component splits the cleaned text into smaller chun
   with GPT-3's maximum token limit. This allows for efficient processing of large
   input texts by conforming to the constraints of the GPT-3 API while preserving sentence
   structure and meaning.
+input-class: TextChunkerInputDict
 name: TextChunker
+output-class: TextChunkerOutputDict
 parameters:
   max_token_limit: 2048
   tokenization_library: nltk
